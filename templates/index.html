@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text_correct</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='jquery.json-viewer.css')}}">
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+<body>
+    <h2>文本纠错体验</h2>
+    <div class="test_area">
+        <form action="/infer" method="post">
+            <div class="text">
+                <textarea name="input" id="input" placeholder="输入或粘贴要检测的文字">{{inputs}}</textarea>
+            </div>
+            <div id="btn">
+                <button class="button" >开始检测</button>
+            </div>
+        </form>
+        <div class="online_result">
+            <div class="container">
+                <div class="card-footer row">
+                    {% for res in result %}
+                    <pre id="output">原始文本:{{res}}--<span style="color: #9C1A1C">正确文本:{{result[res]}}</span></pre>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

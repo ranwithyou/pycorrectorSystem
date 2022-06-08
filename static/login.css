@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+   text-decoration: none;
+}
+a:hover{
+   color:#6effef;
+}
+input{
+   border:none;
+   box-shadow: none;
+   font-size:15px;
+   color:#333333;
+   outline: none;  /*鼠标点击是输入框颜色不发生改变*/
+}
+
+.text{
+   height:40px;
+   width:330px;
+   border-radius: 10px;
+}
+.password{
+   height:40px;
+   width:330px;
+   margin-top: 20px;
+   border-radius: 10px;
+}
+.button1{
+   height:40px;
+   width:330px;
+   background-color: #319aec;
+   font-size:16px;
+   margin-top:15px;
+   border-radius: 10px;
+   color:white;
+}
+.button1:hover{
+   color:white;
+  background-color: #286090;
+}
+.button2:hover{
+   color:white;
+   background-color: #286090;
+}
+.button2{
+   height:40px;
+   width:330px;
+   background-color: #319aec;
+   font-size:16px;
+   margin-top:15px;
+   /*margin-bottom: 100px;*/
+   border-radius: 10px;
+   color:white;
+   display:block;
+}
+/*body { */
+/*    background: url(login.jpeg) no-repeat center fixed; */
+/*    background-size: cover;*/
+/*    !*image-rendering: -webkit-optimize-contrast;*!*/
+/*    overflow:hidden;*/
+/*  }*/
+.index{
+   height:320px;
+   width:400px;
+   border-radius: 10px;
+   box-shadow: 5px 5px 5px #888;
+   background-color: #edeffb;
+}
+.login{
+   margin-left:40px;
+   padding-top:40px;
+}
+.forge{
+   display:block;
+   text-align: right;
+   padding-right:25px;
+}
+.welcome{
+   margin-top:200px;
+   margin-left:800px;
+}
+.person{
+   font-size: 30px;
+   color:black;
+   line-height: 1px;
+   text-align: center;
+   font-weight:500;
+   margin-right:300px;
+   margin-bottom: 40px;
+}
+.alert {
+    position: relative;
+    padding: 7px;
+    margin: 7px 0;
+    border: 1px solid transparent;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    border-radius: 5px;
+}

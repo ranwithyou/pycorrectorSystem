@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}" >
+    <title>用户注册</title>
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+        <div class="alert">{{ message }}</div>
+    {% endfor %}
+    <div class="container">
+        <div class="welcome">
+            <h1 class="person">用户注册</h1>
+            <div class="index">
+                <div class="login">
+                    <form action="/submit" method="post">
+                        <input type="text" class="text" name="username" placeholder="账号/手机号" required><br>
+                        <input type="password" class="password" name="password" placeholder="输入密码" required ><br>
+                        <input type="password" class="password1" name="password1" placeholder="请再次输入密码" required><br>
+                        <a href=""><input type="submit" class="button2" value="注册" onclick="submit()"></a><br>
+                        <span class="forge"><a href="/">已有账号，直接登录</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+         function submit() {
+         $.ajax({
+         url: 'http://' + document.domain + '/submit', /*数据提交到submit处*/
+         type: "POST",
+             contentType: 'application/json;charset=utf-8',
+         data: { "username": $(".text").val(), "password":$(".password").val(), "password1":$(".password1").val()}, /*提交的数据（json格式），从输入框中获取*/
+         success: function (result) {
+          if (result.message == "success!") {
+            alert(result.message)
+          }
+          else {
+             alert(result.message)
+          }
+         }, error:function (res) {
+                    console.log(res);
+                    console.log(1)
+                },
+         });
+         };
+
+         $('.alert').fadeOut(3000);
+</script>
+</body>
+
+
+</html>

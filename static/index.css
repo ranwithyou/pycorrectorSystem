@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*body {*/
+/*    background: url(mountain.jpeg) no-repeat center fixed;*/
+/*    background-size: cover;*/
+/*    overflow:hidden;*/
+/*  }*/
+
+h2{
+    position: relative;
+    top: 20px;
+    left: 40px;
+    color:black;
+}
+button,textarea{
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+}
+#btn{
+    height: 40px;
+    width: 940px;
+}
+.test_area{
+    width: 940px;
+    height: 480px;
+    background-color: #edeffb;
+    margin: auto;
+    position: relative;
+    /*opacity: 0.8;*/
+}
+button {
+    cursor: pointer;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    border: 1px solid black;
+
+}
+button:hover{
+    background-color:rgb(104,143,255);
+    color:white;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+    padding: 15px;
+    height: 200px;
+    width: 880px;
+    margin: 15px;
+}
+.online_result{
+    margin: 20px;
+    width: 900px;
+    height: 140px;
+    overflow: auto;
+    resize: none;
+}
+.white{
+    background-color: white;
+}
